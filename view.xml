@@ -1,0 +1,20 @@
+<openerp>
+    <data>
+        <record id="view_product" model="ir.ui.view">
+            <field name="name">product.view</field>
+            <field name="model">product.model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="amount"/>
+                    <field name="unit_price"/>
+                    <field name="price" readonly="1"/>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_for_onchange" name="Calculate" res_model="product.model" view_mode="tree,form"/>
+
+        <menuitem id="menu_for_onchange" name="The calculation" parent="base.menu_sales" sequence="20" action="action_for_onchange"/>
+
+    </data>
+</openerp>
