@@ -1,13 +1,21 @@
 <openerp>
     <data>
         <record id="view_product" model="ir.ui.view">
-            <field name="name">product.view</field>
+            <field name="name">product view</field>
             <field name="model">product.model</field>
             <field name="arch" type="xml">
                 <form>
-                    <field name="amount"/>
-                    <field name="unit_price"/>
-                    <field name="price" readonly="1"/>
+                	<sheet>
+                		<group name="group_top">
+                			<group name="group_left">
+                				<field name="amount"/>
+                			</group>
+                			<group name="group_right">
+                				<field name="unit_price"/>
+                				<field name="price" readonly="1"/>
+                			</group>
+                		</group>
+                	</sheet>
                 </form>
             </field>
         </record>
